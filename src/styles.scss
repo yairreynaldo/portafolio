@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'node_modules/aos/src/sass/aos.scss';
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    background: rgb(85, 17, 218);
+    background: linear-gradient(90deg, rgba(85, 17, 218, 1) 0%, rgba(14, 4, 93, 1) 0%, rgba(6, 4, 75, 1) 100%);
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+a {
+    color: white;
+}
+
+@for $i from 1 through 100 {
+    .animation-#{$i} {
+        animation-delay: #{$i / 10}s;
+    }
+}

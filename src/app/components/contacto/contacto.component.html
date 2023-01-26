@@ -1,0 +1,28 @@
+<div class="cont-general">
+    <h2>Contacto</h2>
+    <div class="contacto-rapido">
+        <div class="cel">
+            <i class="uil uil-phone"></i>
+            <p>+54 9 2314 53-9329</p>
+        </div>
+        <div class="correo">
+            <i class="uil uil-envelope-check"></i>
+            <p>yairreynaldo8@gmail.com</p>
+        </div>
+    </div>
+    <form [formGroup]="datos">
+        <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputPassword1" formControlName="nombre" placeholder="Nombre">
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" id="exampleFormControlInput1" formControlName="correo" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="mensaje" placeholder="Mensaje"></textarea>
+        </div>
+
+        <div class="cont-btn">
+            <button class="btn btn-primary" (click)="envioCorreo()">{{enviando}}</button>
+        </div>
+    </form>
+</div>
