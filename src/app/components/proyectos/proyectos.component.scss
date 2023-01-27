@@ -9,60 +9,111 @@
 
 .cont-general h2 {
     text-align: center;
-    width: 70%;
+    width: 80%;
 }
 
 .wrapper {
-    width: 70%;
-    padding: 2rem 2rem;
+    width: 80%;
+    /* padding: 2rem 2rem; */
 }
 
-.card {
+.cont-proy {
     width: 20rem;
-    background-color: #0a0248;
-    border: none;
+    height: 27rem;
+    background-color: var(--color-3);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: .5s ease-in-out;
 }
 
-.card-title {
+.cont-proy:hover {
+    transform: scale(1.05);
+    transition: .5s ease-in-out;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.3);
+}
+
+.proy-title {
     text-align: center;
     font-size: 1.10rem;
-    width: 20rem;
+    width: 100%;
+    color: black;
 }
 
-.card-img {
-    height: 20rem;
-    width: 20rem;
-    position: relative;
+.img-proy {
+    height: 15rem;
+    width: 100%;
+    /* position: relative; */
+    border-radius: 0.5rem;
+    /* object-fit: cover; */
 }
 
-
-/* .card-img-top:hover {
-    filter: hue-rotate(120deg);
-} */
-
-.card-btns {
-    position: absolute;
-    bottom: 0;
+.proy-btns {
     display: flex;
     justify-content: center;
-    background-color: #6a8520;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    flex-direction: column;
     width: 100%;
+    gap: 1rem;
 }
 
-.card-btns i {
+.tec-uti {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 1px solid black;
+}
+
+.tec-uti img {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-bottom: 5px;
+}
+
+.btn-git {
+    display: flex;
+    justify-content: center;
     font-size: 2rem;
 }
 
-.activar {
-    opacity: 1;
+.btn-git:hover {
+    color: black;
 }
 
+.btn-git i {
+    border-radius: 50%;
+    border: solid 1px black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    transition: .5s, color .10s;
+    background-color: #3ABCF2
+}
 
-/* .row {
-    gap: 20px;
-} */
+.btn-git i:hover {
+    /* background-color: initial; */
+    cursor: pointer;
+    transform: scale3d(1.2, 1.2, 0.3);
+}
+
+.cont-doble-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 767px) {
+    .cont-proy {
+        width: 15rem;
+        height: 22rem;
+    }
+    .col {
+        display: flex;
+        justify-content: center;
+    }
+}

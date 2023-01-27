@@ -14,15 +14,64 @@ form {
 
 form input,
 textarea {
-    background-color: #e8f5e4ad;
+    /* background-color: #e8f5e4ad; */
+    background-color: var(--color-3);
     border: none;
     color: black;
+    resize: none;
+    margin: 1rem 0;
 }
 
 .cont-btn {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: 1rem 0;
+}
+
+.btn-enviar {
+    width: 10rem;
+    border-radius: 7px;
+    background: initial;
+    border: 2px solid var(--color-4);
+    font-size: 1.2rem;
+    padding: 0.95rem;
+    color: white;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    /* background: #e1e1e1; */
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+.btn-enviar:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-4);
+    transform: scaleX(0);
+    transform-origin: 50%;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.btn-enviar:hover,
+.btn-enviar:focus,
+.btn-enviar:active {
+    color: white;
+}
+
+.btn-enviar:hover:before,
+.btn-enviar:focus:before,
+.btn-enviar:active:before {
+    transform: scaleX(1);
 }
 
 .contacto-rapido {
@@ -33,7 +82,8 @@ textarea {
 
 .contacto-rapido div {
     border-radius: 0.5rem;
-    background-color: #e8f5e4ad;
+    /* background-color: #e8f5e4ad; */
+    background-color: var(--color-3);
     display: flex;
     /* justify-content: center; */
     width: 18rem;
@@ -51,4 +101,13 @@ textarea {
 .contacto-rapido div i {
     color: black;
     font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .contacto-rapido {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
 }

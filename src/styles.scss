@@ -1,16 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'node_modules/aos/src/sass/aos.scss';
+:root {
+    --color-1: linear-gradient(90deg, rgba(85, 17, 218, 1) 0%, rgba(14, 4, 93, 1) 0%, rgba(6, 4, 75, 1) 100%);
+    --color-2: #0a0248;
+    --color-3: #62D4E3;
+    --color-4: #5F8AFA;
+    --font-1: 'Open Sans', sans-serif;
+    --font-2: 'IBM Plex Sans', sans-serif;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 75px;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-1);
     color: white;
-    background: rgb(85, 17, 218);
-    background: linear-gradient(90deg, rgba(85, 17, 218, 1) 0%, rgba(14, 4, 93, 1) 0%, rgba(6, 4, 75, 1) 100%);
+    background: var(--color-1);
 }
 
 h1,

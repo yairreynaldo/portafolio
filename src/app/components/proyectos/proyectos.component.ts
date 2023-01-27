@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-proyectos',
@@ -6,19 +6,11 @@ import { Component, ElementRef, OnInit, ViewChild, Renderer2 } from '@angular/co
   styleUrls: ['./proyectos.component.scss']
 })
 export class ProyectosComponent implements OnInit {
-  @ViewChild('cardBtns') cardBtns!: ElementRef;
 
-  constructor(private render2:Renderer2, private ElByClassName: ElementRef) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  activarBtns() {
-    this.render2.addClass(this.cardBtns.nativeElement, "activar");
-  }
-
-  desactivarBtns() {
-    this.render2.removeClass(this.cardBtns.nativeElement, "activar");
-  }  
 
 }
